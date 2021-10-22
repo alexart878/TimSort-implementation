@@ -1,8 +1,5 @@
 ﻿#include <iostream>
 #include "vector.h"
-#include <vector>
-
-using namespace std;
 
 int GetMinRun(int n) {
 	int r = 0;
@@ -13,7 +10,7 @@ int GetMinRun(int n) {
 	return n + r;
 }
 
-void SelectionSort(vector <int> &p_d_arr, int left, int right) {
+void SelectionSort(Vector <int> &p_d_arr, int left, int right) {
 
 	for (int i = left; i < right; i++) {
 		
@@ -28,7 +25,7 @@ void SelectionSort(vector <int> &p_d_arr, int left, int right) {
 	}
 }
 
-void Merge(vector <int>& p_d_arr, int p, int q, int r)
+void Merge(Vector <int>& p_d_arr, int p, int q, int r)
 {
 
 	int i, j, k;
@@ -67,7 +64,7 @@ void Merge(vector <int>& p_d_arr, int p, int q, int r)
 	}
 }
 
-void MergeSort(vector <int>& p_d_arr, int p, int r)
+void MergeSort(Vector <int>& p_d_arr, int p, int r)
 {
 	int q;
 	if (p < r)
@@ -79,7 +76,7 @@ void MergeSort(vector <int>& p_d_arr, int p, int r)
 	}
 }
 
-void TimSort(vector <int>& p_d_arr) {
+void TimSort(Vector <int>& p_d_arr) {
 	int minrun = GetMinRun(p_d_arr.size());
 	int run = minrun;
 
@@ -113,7 +110,7 @@ int main() {
 	l = 100000;
 	std::cout << std::endl << std::endl;
 	
-	vector <int> p_d_arr;
+	Vector <int> p_d_arr;
 	srand(time(NULL));
 	for (size_t i = 0; i < l; i++) {
 		p_d_arr.push_back((rand() % range) - (range / 2));

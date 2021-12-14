@@ -100,10 +100,8 @@ void TimSort(Vector <int>& p_d_arr) {
 
 int main() {
 	
-	setlocale(LC_ALL, "rus");
-	
 	size_t l = 0;
-	int range = 16384;
+	size_t range = 16384;
 	
 	//std::cout << "Enter array size: ";
 	//std::cin >> l;
